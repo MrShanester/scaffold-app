@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @planetoid.name %>
+</p>
+
+<p>
+  <strong>Mass:</strong>
+  <%= @planetoid.mass %>
+</p>
+
+<p>
+  <strong>Diameter:</strong>
+  <%= @planetoid.diameter %>
+</p>
+
+<p>
+  <strong>Orbital distance:</strong>
+  <%= @planetoid.orbital_distance %>
+</p>
+
+<%= link_to 'Edit', edit_planetoid_path(@planetoid) %> |
+<%= link_to 'Back', planetoids_path %>

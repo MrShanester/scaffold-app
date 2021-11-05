@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Planetoids</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Mass</th>
+      <th>Diameter</th>
+      <th>Orbital distance</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @planetoids.each do |planetoid| %>
+      <tr>
+        <td><%= planetoid.name %></td>
+        <td><%= planetoid.mass %></td>
+        <td><%= planetoid.diameter %></td>
+        <td><%= planetoid.orbital_distance %></td>
+        <td><%= link_to 'Show', planetoid %></td>
+        <td><%= link_to 'Edit', edit_planetoid_path(planetoid) %></td>
+        <td><%= link_to 'Destroy', planetoid, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<%= link_to 'New Planetoid', new_planetoid_path %>
